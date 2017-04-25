@@ -12,16 +12,16 @@ import org.springframework.jms.core.MessageCreator;
 
 public class MyJmsSender {
 	
-	@Autowired
+ 
 	private JmsTemplate template;
-	@Autowired
+ 
 	private Destination destination;
 	
 	public JmsTemplate getTemplate() {
 		return template;
 	}
 	public void setTemplate(JmsTemplate template) {
-		this.template = template;
+		this.template = template;                // pass in the template
 	}
 	public Destination getDestination() {
 		return destination;
@@ -39,8 +39,7 @@ public class MyJmsSender {
 				
 				return msg;
 			}
-		}
-		
+		}		
 		MyMessageCreator mmc = new MyMessageCreator();
 		template.send(destination, mmc);
 	}

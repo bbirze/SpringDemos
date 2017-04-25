@@ -8,16 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 
 public class MyJmsReceiver {
-	@Autowired
+ 
 	private JmsTemplate template;
-	@Autowired
+ 
 	private Destination destination;
 	
 	public JmsTemplate getTemplate() {
 		return template;
 	}
 	public void setTemplate(JmsTemplate template) {
-		this.template = template;
+		this.template = template;               // pass in the template
 	}
 	public Destination getDestination() {
 		return destination;

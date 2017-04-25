@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-// Spring MVC, getStudents 
-//		takes a Model and 
+// Spring REST getStudents 
+//		mixing MVC Model in and 
 //		returns the name of a View
 //
 @Controller
@@ -29,8 +29,7 @@ public class StudentController {
 		log.info("************    adding students: \n\t\t\t" + students);
 		
 		model.addAttribute("students", students);
-		return "studentList";
-		//return "Hello";
+		return "studentList";           // view
 	}
 
 }

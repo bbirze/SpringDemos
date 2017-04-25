@@ -22,11 +22,11 @@
         http://www.springframework.org/schema/util 
         http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<context:component-scan base-package="example.testrmi"/>
+	<context:component-scan base-package="example.remote"/>
 	
 	<bean id="helloService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
 		<property name="serviceUrl" value="rmi://localhost:1099/HelloService" />
-		<property name="serviceInterface" value="example.testrmi.server.HelloService" />
+		<property name="serviceInterface" value="example.remote.HelloService" />
 	</bean>
 	
 </beans>         

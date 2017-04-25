@@ -30,21 +30,8 @@
 	<jee:jndi-lookup id="purchaseQueue"        <!-- JMS Queue -->
 	     resource-ref="false"	jndi-name="jms/purchaseQ" />
 	     
-   <!-- ============ JMS Sender  =================================== -->
-                                               <!-- Template ref's Connection Factory -->
-	<bean  id="jmsTemplate"     class="org.springframework.jms.core.JmsTemplate">
-	    <property name="connectionFactory"   ref="jmsConnectionFactory" />
-	</bean>
-                                               <!-- Sender refs Template and JMS Queue   -->
-	<bean  id="myJmsSender" class="beans.MyJmsSender">
-	    <property name="template"      ref="jmsTemplate" />
-	    <property name="destination"   ref="purchaseQueue"
-	</bean>
-	
-   <!-- ============ JMSReceiver  =================================== -->
-   
    <!-- POJO Listener Bean: refs in our Listener Container config    -->
-	<bean id="myMessageListener" class="demo.pojolistener.MyMessageListener" />
+	<bean id="myMessageListener" class="demo.jms.pojolistener.MyMessageListener" />
 
    <!-- Configure Spring Message Listener Container, 
          DefaultMessageListenerContainer gives us JMS connectivity Plus Transactions     -->

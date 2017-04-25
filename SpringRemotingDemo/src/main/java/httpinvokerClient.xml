@@ -22,9 +22,10 @@
         http://www.springframework.org/schema/util 
         http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<context:component-scan base-package="example.testhttpinvoker"/>
+	<context:component-scan base-package="example.remote"/>
 	
-	<bean id="helloService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+	<bean id="helloService" 
+	      class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
 		<property name="serviceUrl" value="http://localhost:8080/HelloService" />
 		<property name="serviceInterface" value="example.testhttpinvoker.server.HelloService" />
 	</bean>

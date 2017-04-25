@@ -2,7 +2,7 @@ package example.testhttpinvoker.server;
 
 import org.springframework.stereotype.Component;
 
-import example.testrmi.server.HelloService;
+import example.remote.HelloService;
 
 @Component
 public class HelloServiceHttpInvokerImpl implements HelloService {
