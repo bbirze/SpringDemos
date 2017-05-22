@@ -1,8 +1,6 @@
-package di.university;
+package DependencyInjection.di.university;
 
 import java.util.ArrayList;
-
-import university.Advisor;
 
 public class Professor {
 

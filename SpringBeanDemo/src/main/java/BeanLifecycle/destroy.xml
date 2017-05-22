@@ -24,7 +24,7 @@
 	<context:annotation-config/>
 	<context:component-scan base-package="mypackage"/>
 	
-	<bean id="myDestroyBean" class="mypackage.MyDestroyBean" 
+	<bean id="myDestroyBean" class="BeanLifecycle.mypackage.MyDestroyBean" 
 			destroy-method="myDestroyMethod">
 	</bean>
 	

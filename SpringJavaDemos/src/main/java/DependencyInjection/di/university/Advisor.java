@@ -1,4 +1,4 @@
-package di.university;
+package DependencyInjection.di.university;
 
 public class Advisor {
 	private String name;

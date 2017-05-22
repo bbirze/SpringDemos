@@ -1,11 +1,11 @@
-package university.test;
+package JavaAnnotations.university.test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import university.Student;
-import university.config.AdvisorConfig;
-import university.config.StudentConfig;
+import JavaAnnotations.university.Student;
+import JavaAnnotations.university.config.AdvisorConfig;
+import JavaAnnotations.university.config.StudentConfig;
 
 public class TestUniversity {
 	

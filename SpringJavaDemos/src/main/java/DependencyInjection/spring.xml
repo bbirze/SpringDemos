@@ -25,36 +25,36 @@
         http://www.springframework.org/schema/util 
         http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
-	<bean id="advisor1" class="di.university.Advisor" />
+	<bean id="advisor1" class="DependencyInjection.di.university.Advisor" />
 	
-	<bean id="student0" class="di.university.Student">
+	<bean id="student0" class="DependencyInjection.di.university.Student">
 		<property name="name" value="Harry" />
 		<property name="id" value="77" />
 		<property name="gpa" value="3.33" />
 		<property name="theAdvisor" ref="advisor1" />
 	</bean>
 	
-	<bean id="student1" class="di.university.Student">
+	<bean id="student1" class="DependencyInjection.di.university.Student">
 		<constructor-arg value="Joe" />
 		<constructor-arg ref="advisor1" />
 	</bean>
 	
-	<bean id="student2" class="di.university.Student">
+	<bean id="student2" class="DependencyInjection.di.university.Student">
 		<constructor-arg ref="advisor1" />
 		<constructor-arg value="Sue" />
 	</bean>
 	
-	<bean id="student3" class="di.university.Student">
+	<bean id="student3" class="DependencyInjection.di.university.Student">
 		<constructor-arg value="12" />
 		<constructor-arg value="3.33" />
 	</bean>
 	
-	<bean id="student4" class="di.university.Student">
+	<bean id="student4" class="DependencyInjection.di.university.Student">
 		<constructor-arg value="3.33" index="1"/>
 		<constructor-arg value="12"   index="0" />
 	</bean>
 	
-	<bean id="student5" class="di.university.Student">
+	<bean id="student5" class="DependencyInjection.di.university.Student">
 		<constructor-arg value="3.33" index="1"/>
 		<constructor-arg value="12"   index="0" />
 		<property name="name" value="George" />

@@ -1,6 +1,4 @@
-package di.university;
-
-import di.university.Advisor;
+package DependencyInjection.di.university;
 
 public class Student {
 	

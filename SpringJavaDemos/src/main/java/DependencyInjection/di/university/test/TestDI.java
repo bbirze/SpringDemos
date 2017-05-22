@@ -1,15 +1,15 @@
-package di.university.test;
+package DependencyInjection.di.university.test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import di.university.Student;
+import DependencyInjection.di.university.*;
 
 public class TestDI {
 	
 	public static void main(String[] args)  {
 		ApplicationContext ctx =
-				new FileSystemXmlApplicationContext("DependencyInjection/spring.xml");
+				new FileSystemXmlApplicationContext("src/main/java/DependencyInjection/spring.xml");
 		
 		Student s0 = (Student)ctx.getBean("student0");
 		System.out.println(s0);

@@ -1,4 +1,4 @@
-package hello;
+package XMLAnnotations.hello;
 
 import javax.annotation.Resource;
 

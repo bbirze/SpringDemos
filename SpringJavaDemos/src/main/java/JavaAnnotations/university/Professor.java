@@ -1,8 +1,6 @@
-package university;
+package JavaAnnotations.university;
 
 import java.util.ArrayList;
-
-import di.university.Advisor;
 
 public class Professor {
 

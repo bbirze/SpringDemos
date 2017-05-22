@@ -1,10 +1,10 @@
-package university.config;
+package JavaAnnotations.university.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import university.Advisor;
-import university.Professor;
+import JavaAnnotations.university.Advisor;
+import JavaAnnotations.university.Professor;
 
 @Configuration
 public class AdvisorConfig {

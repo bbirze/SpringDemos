@@ -1,10 +1,7 @@
-package university;
+package JavaAnnotations.university;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import university.Professor;
-import university.Student;
 
 public class Advisor {
 	private int AdvisorID;

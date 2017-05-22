@@ -1,20 +1,19 @@
-package mypackage.test;
+package BeanLifecycle.mypackage.test;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import mypackage.MyDestroyBean;
+import BeanLifecycle.mypackage.MyDestroyBean;
 
 public class TestDestroy {
 
 	public static void main(String[] args) {
 		AbstractApplicationContext ctx =
-				new FileSystemXmlApplicationContext("BeanLifecycle/destroy.xml");
+				new FileSystemXmlApplicationContext("src/main/java/BeanLifecycle/destroy.xml");
 		
 		MyDestroyBean mcb = (MyDestroyBean)ctx.getBean("myDestroyBean");
 		
-		ctx.close();
+		ctx.close();        // must close context to invoke destroy lifecycle methods
 	}
 
 }

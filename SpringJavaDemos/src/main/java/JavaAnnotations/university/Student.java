@@ -1,6 +1,4 @@
-package university;
-
-import university.Advisor;
+package JavaAnnotations.university;
 
 public class Student {
 	

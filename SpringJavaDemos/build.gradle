@@ -28,5 +28,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+    compile 'org.springframework:spring-aop:4.2.6.RELEASE'
+	compile 'org.springframework:spring-aspects:4.2.6.RELEASE'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -1,4 +1,4 @@
-package mypackage;
+package BeanLifecycle.mypackage;
 
 import javax.annotation.PostConstruct;
 
@@ -15,41 +15,43 @@ public class MyCreationBean
 	private int prop1;
 	private String prop2;
 	
-	public int getProp1() {
-		return prop1;
-	}
-	public void setProp1(int prop1) {
+
+	public void   setProp1(int prop1)    { 
+		System.out.println("\n In setProp1() given value: " + prop1 + "\n");
 		this.prop1 = prop1;
 	}
-	public String getProp2() {
-		return prop2;
-	}
-	public void setProp2(String prop2) {
-		this.prop2 = prop2;
+ 
+	public void   setProp2(String prop2) { 
+		System.out.println("\n In setProp2() given value: " + prop2 + "\n");
+		this.prop2 = prop2; 
 	}
 
-	@Override
+	@Override                     // BeanFactoryAware method
 	public void setBeanFactory(BeanFactory arg0) throws BeansException {
-		System.out.println("In setBeanFactory()");
+		System.out.println("\n In BeansException.setBeanFactory() given BeanFactory: \n" + arg0 + "\n");
 	}
 	
-	@Override
+	@Override                     // ApplicationContextAware method
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
-		System.out.println("In setApplicationContext()");
+		System.out.println("\n In ApplicationContextAware.setApplicationContext() given ApplicationContext: \n" + arg0 + "\n");
 	}
 	
-	@Override
+	@Override                     // InitializingBean method
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("In afterPropertiesSet()");
+		System.out.println("\n In InitializingBean.afterPropertiesSet()\n");
 	}
 
+	// Spring init-method configured in create.xml
+	//
 	public void myInitMethod()  {
-		System.out.println("In myInitMethod()");
+		System.out.println("\n In XML Cconfigured init-method, myInitMethod()\n");
 	}
 	
+	// @PostConstruct: JEE annotation (JSR-250)
+	//                 Processed by CommonAnnotataionBeanPostProcessor
 	@PostConstruct
 	public void myPostConstructMethod() {
-		System.out.println("In myPostConstructMethod()");
+		System.out.println("\n In @PostConstruct myPostConstructMethod()\n");
 	}
 
 }

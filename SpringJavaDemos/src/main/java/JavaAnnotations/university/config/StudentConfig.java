@@ -1,12 +1,12 @@
-package university.config;
+package JavaAnnotations.university.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-import university.Advisor;
-import university.Student;
+import JavaAnnotations.university.Advisor;
+import JavaAnnotations.university.Student;
 
 @Configuration
 @Import(AdvisorConfig.class)

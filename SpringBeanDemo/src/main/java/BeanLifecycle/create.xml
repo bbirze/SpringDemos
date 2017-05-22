@@ -24,7 +24,7 @@
 	<context:annotation-config/>
 	<context:component-scan base-package="mypackage"/>
 	
-	<bean id="myCreateBean" class="mypackage.MyCreationBean" init-method="myInitMethod">
+	<bean id="myCreateBean" class="BeanLifecycle.mypackage.MyCreationBean" init-method="myInitMethod">
 		<property name="prop1" value="12" />
 		<property name="prop2" value="abcd" />
 	</bean>
